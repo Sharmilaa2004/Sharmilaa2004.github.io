@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sharmilaa | Portfolio</title>
+  <link rel="stylesheet" href="style1.css" />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <script src="https://unpkg.com/typed.js@2.0.15/dist/typed.umd.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+        .contact-box {
+            width: 400px;
+            background: #1c2541;
+            padding: 25px;
+            border-radius: 10px;
+        }
+
+        .contact-box input,
+        .contact-box textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 12px;
+            border: none;
+            border-radius: 6px;
+            outline: none;
+            background: #2a3352;
+            color: white;
+        }
+
+        .contact-box button {
+            width: 100%;
+            padding: 12px;
+            background: rgb(255, 19, 240);
+            border: none;
+            border-radius: 6px;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .contact-box button:hover {
+            background: #2563eb;
+        }
+
+        #successMessage {
+            margin-top: 15px;
+            color: #00ff88;
+            font-weight: 600;
+            text-align: center;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+    </style>
+
+</head>
+<body>
+  <div class="background-animation">
+    <div class="ball"></div>
+    <div class="ball"></div>
+    <div class="ball"></div>
+    <div class="ball"></div>
+    <div class="ball"></div>
+  </div>
+
+  <!-- ===== HEADER ===== -->
+  <header>
+   <div class="logo" style="color: white; font-family:'Times New Roman', Times, serif; font-style: italic;"><span style="color:rgb(255, 232, 25); font-size: 50px;">S</span>harmilaa</div>
+    <input type="checkbox" id="menu-toggle" />
+    <label for="menu-toggle" class="menu-icon"><i class="fa fa-bars"></i></label>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+<script src="main.js"></script>
+  <!-- ===== HOME ===== -->
+
+<section class="home" id="home">
+  <div class="home-container">
+    <div class="home-content">
+      <center>
+      <h3>Hi,This is</h3>
+      <h1>Sharmilaa</h1>
+      <section class="hero"><h2>I am <span class="typing-text"></span></h2>
+      
+      </section>
+
+  <script>
+    const roles = [
+      "Web Developer",
+      "Front-End Developer",
+      "IoT Enthusiast",
+      "UI/UX Designer"
+    ];
+
+    let index = 0;
+    let charIndex = 0;
+    let deleting = false;
+    const typingElement = document.querySelector(".typing-text");
+
+    function typeEffect() {
+      const currentRole = roles[index];
+
+      if (!deleting) {
+        typingElement.textContent = currentRole.substring(0, charIndex + 1);
+        charIndex++;
+
+        if (charIndex === currentRole.length) {
+          deleting = true;
+          setTimeout(typeEffect, 1200); // pause after typing word
+          return;
+        }
+      } else {
+        typingElement.textContent = currentRole.substring(0, charIndex - 1);
+        charIndex--;
+
+        if (charIndex === 0) {
+          deleting = false;
+          index = (index + 1) % roles.length; // move to next role
+        }
+      }
+
+      const speed = deleting ? 60 : 100;
+      setTimeout(typeEffect, speed);
+    }
+
+    document.addEventListener("DOMContentLoaded", typeEffect);
+</script>
+      <p>
+        I'm an aspiring Web Developer with a passion to design comprehensive and efficient websites.
+      </p>
+      <div class="home-buttons">
+        <a href="#" class="btn-box">Hire Me</a>
+        <a href="SHARMILAA RESUME UPDATED.pdf" class="btn-box">Download Resume</a>
+      </div>
+    </div>
+
+    <div class="one">
+      <div class="image">
+        <img src="sharmilaa.jpg" alt="Sharmilaa">
+      </div><br><br>
+
+      <div class="home-links">
+        <a href="https://github.com/dashboard" target="_blank" style="text-decoration: none;"><i class="fa-brands fa-github"></i></a>
+        <a href="mailto:sharmilaa300504@gmail.com" style="text-decoration: none;"><i class="fa-solid fa-envelope"></i></a>
+        <a href="https://www.linkedin.com/feed/" target="_blank" style="text-decoration: none;"><i class="fa-brands fa-linkedin"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- ===== ABOUT ===== -->
+  <section class="about-section" id="about">
+    <center><h2 style="font-size: 40px;">About <span>Me</span></h2></center><br><br>
+     
+    <h1>Full Stack Developer</h1>
+    <p>
+      I am an aspiring web developer with strong foundational skills in 
+      <b>HTML</b>, <b>CSS</b>, <b>JavaScript</b>, and <b>MySQL</b>. 
+      I have a solid understanding of core programming concepts like 
+      <b>Python</b>, data structures, and algorithms.
+    </p>
+
+    <p>
+      My interests extend beyond web development, encompassing emerging fields 
+      like <b>IoT</b> and <b>machine learning</b>, demonstrating a versatile 
+      skill set and a keen interest in cutting-edge technologies.
+    </p>
+
+    <p>
+      I have created many leveraging web pages which are user-friendly and 
+      dynamic with many new features. I also have knowledge about 
+      <b>Django</b>. Additionally, I have deepened my knowledge in 
+      <b>UI/UX Designing</b>.
+    </p>
+<center>
+    <a href="#" class="btn">More About Me</a>
+  </section>
+
+  <!-- ===== EDUCATION ===== -->
+ <!-- ===== EDUCATION SECTION ===== -->
+<section class="education" id="education">
+  <div class="education-text">
+    <h2 style="font-size: 40px;">My <span>Education</span></h2><br><br>
+
+    <div class="timeline">
+
+      <div class="timeline-item left">
+        <span class="dot"></span>
+        <div class="timeline-box">
+          <span class="date">📅 2022 - 2026</span>
+          <h3>B.E Electronics and Communication Engineering</h3>
+          <p>Adhiyamaan College Of Engineering (Autonomous)</p>
+          <h4>Percentage: 94%</h4>
+        </div>
+      </div>
+
+      <div class="timeline-item right">
+        <span class="dot"></span>
+        <div class="timeline-box">
+          <span class="date">📅 2020 - 2022</span>
+          <h3>Higher Secondary Schooling - CBSE</h3>
+          <p>Asian Christian High School</p>
+          <h4>Percentage: 94.6%</h4>
+        </div>
+      </div>
+
+      <div class="timeline-item left">
+        <span class="dot"></span>
+        <div class="timeline-box">
+          <span class="date">📅 2010 - 2020</span>
+          <h3>Secondary Schooling - CBSE</h3>
+          <p>Asian Christian High School</p>
+          <h4>Percentage: 96.4%</h4>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+  <!-- ===== PROJECTS ===== -->
+ <section class="projects" id="projects">
+<h2 style="font-size: 40px;">My <span> Projects</span></h2><br><br>
+
+  <div class="project-container">
+    <div class="project-box">
+      <i class="fa-solid fa-code icon"></i>
+      <h3>Mini Python Projects</h3>
+      <p>
+        Simple beginner-friendly Python projects to understand the core and basic concepts.
+        
+      </p>
+      <a href="https://github.com/Sharmilaa2004" class="project-btn">
+        <i class="fa-brands fa-github"></i> Learn More
+      </a>
+    </div>
+
+    <div class="project-box">
+      <i class="fa-solid fa-crop icon"></i>
+      <h3>Frontend Projects</h3>
+      <p>
+        Mini E-commerce, Fitness Checking websites built using HTML, CSS, and JavaScript.
+        
+      </p>
+      <a href="https://github.com/Sharmilaa2004" class="project-btn">
+        <i class="fa-brands fa-github"></i> Learn More
+      </a>
+    </div>
+
+    <div class="project-box">
+      <i class="fa-brands fa-apple icon"></i>
+      <h3>UI/UX Projects</h3>
+      <p>
+        Built many UI interfaces for chocolate shopping, fitness tracking app, travel app, etc.
+       
+      </p>
+      <a href="https://github.com/Sharmilaa2004" class="project-btn">
+        <i class="fa-brands fa-github"></i> Learn More
+      </a>
+    </div>
+  </div>
+</section>
+
+
+  <!-- ===== SKILLS ===== -->
+  
+<section id="skills" class="skills">
+  <h2>My <span>Skills</span></h2>
+  <br>
+
+  <!-- Radial Bars (Core Skills) -->
+  <div class="radial-skill-container">
+    <div class="radial-bar" style="--percent:90;">
+      <div class="inner-circle">
+        <span>80%</span>
+      </div>
+      <p>Creativity</p>
+    </div>
+    <div class="radial-bar" style="--percent:85;">
+      <div class="inner-circle">
+        <span>70%</span>
+      </div>
+      <p>Communication</p>
+    </div>
+    <div class="radial-bar" style="--percent:80;">
+      <div class="inner-circle">
+        <span>80%</span>
+      </div>
+      <p>Problem-Solving</p>
+    </div>
+    <div class="radial-bar" style="--percent:75;">
+      <div class="inner-circle">
+        <span>85%</span>
+      </div>
+      <p>Team Spirit</p>
+    </div>
+  </div>
+
+  <!-- Horizontal Progress Bars (Additional Tools) -->
+  <div class="linear-skill-container">
+    <div class="skill">
+      <div class="skill-name"><i class="fa-brands fa-html5"></i>  HTML</div>
+      <div class="progress-bar">
+        <div class="progress" style="--value:90%;"></div>
+      </div>
+    </div>
+    <div class="skill">
+      <div class="skill-name"><i class="fa-brands fa-css"></i>  CSS</div>
+      <div class="progress-bar">
+        <div class="progress" style="--value:60%;"></div>
+      </div>
+    </div>
+    <div class="skill">
+      <div class="skill-name"><i class="fa-brands fa-figma"></i>  UI/UX Design</div>
+      <div class="progress-bar">
+        <div class="progress" style="--value:85%;"></div>
+      </div>
+    </div>
+    <div class="skill">
+      <div class="skill-name"><i class="fa-solid fa-database"></i>  MySQL</div>
+      <div class="progress-bar">
+        <div class="progress" style="--value:80%;"></div>
+      </div>
+    </div>
+    <div class="skill">
+      <div class="skill-name">JavaScript</div>
+      <div class="progress-bar">
+        <div class="progress" style="--value:75%;"></div>
+      </div>
+    </div>
+    <div class="skill">
+      <div class="skill-name"><i class="fa-brands fa-react"></i>  React JS</div>
+      <div class="progress-bar">
+        <div class="progress" style="--value:65%;"></div>
+      </div>
+    </div>
+    <div class="skill">
+      <div class="skill-name"><i class="fa-brands fa-python"></i>  Python</div>
+      <div class="progress-bar">
+        <div class="progress" style="--value:75%;"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <!-- ===== CONTACT ===== -->
+ <!-- ===== CONTACT SECTION ===== -->
+<section class="contact" id="contact">
+  <div class="contact-container">
+    
+    <div class="contact-text">
+      <h2 style="font-size: 40px;">Contact <span>Me</span></h2>
+      <h4>Let's Work Together</h4>
+      <p>
+        I am very happy to launch my personal Portfolio Website built using HTML, CSS, and JavaScript. 
+        Feel free to contact me and clear any doubts via mail or phone.
+      </p>
+
+      <ul class="contact-list">
+        <li><i class="fa-solid fa-envelope"></i> sharmilaa@gmail.com</li>
+        <li><i class="fa-solid fa-phone"></i> 8667218703</li>
+      </ul>
+      <div class="contact-icons">
+        <a href="#"><i class="fa-brands fa-github"></i></a>
+        <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+        <a href="#"><i class="fa-solid fa-envelope"></i></a>
+        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+      </div>
+    </div>
+
+  
+
+
+
+<div class="contact-box">
+    <form id="contactForm">
+        <input type="text" placeholder="Enter Your Name" required>
+        <input type="email" placeholder="Enter Your Email" required>
+        <input type="text" placeholder="Enter Your Subject" required>
+        <textarea rows="4" placeholder="Enter Your Message" required></textarea>
+
+        <button type="submit">Submit</button>
+        <p id="successMessage">Submitted successfully!</p>
+    </form>
+</div>
+
+<script>
+const form = document.getElementById("contactForm");
+const successMessage = document.getElementById("successMessage");
+
+form.addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const formData = new FormData(form);
+
+    fetch("sendmail.php", {
+        method: "POST",
+        body: formData
+    })
+    .then(response => response.text())
+    .then(data => {
+        if (data === "success") {
+            successMessage.style.opacity = "1";
+            form.reset();
+
+            setTimeout(() => {
+                successMessage.style.opacity = "0";
+            }, 3000);
+        }
+    });
+});
+</script>
+
+  </div>
+</section>
+  <!-- Scroll to Top Button (only visible on mobile) -->
+  <button id="scrollBtn" title="Go to top">↑</button>
+  <script>
+    // Show button only when scrolled down
+    window.onscroll = function() {
+      const scrollBtn = document.getElementById("scrollBtn");
+      if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        scrollBtn.style.display = "block";
+      } else {
+        scrollBtn.style.display = "none";
+      }
+    };
+    // Smooth scroll to top
+    document.getElementById("scrollBtn").onclick = function() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+  </script>
+<div class="last-text">
+        <p>Developed with love by Sharmilaa &copy 2024</p>
+    </div>
+  <script>
+    // Smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+        document.getElementById("menu-toggle").checked = false;
+      });
+    });
+  </script>
+</body>
+</html>
